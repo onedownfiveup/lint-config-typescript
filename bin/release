@@ -1,0 +1,30 @@
+#!/bin/bash
+
+set -e
+
+fatal() {
+  echo "FATAL: $1" >&2
+  exit 1
+}
+
+version() {
+  docker-compose run --rm app node -e 'console.log(require("./package.json").version)' | tr -d ' \r\n'
+}
+
+# Check state
+git fetch || fatal 'Could not fetch remote Git'
+git fetch --tags || fatal 'Could not fetch remote Git'
+[[ -z "$(git status --porcelain)" ]] || fatal 'Working tree not clean'
+[[ "$(git rev-parse --abbrev-ref HEAD)" = "master" ]] || fatal 'Not on master branch'
+git diff --quiet HEAD '@{u}' || fatal 'Branch is not up-to-date with remote'
+
+# Publish package
+docker-compose run --rm app yarn publish --no-git-tag-version
+
+# Create commit and tag, and push
+version="$(version)"
+git add package.json
+git commit -m "v$version"
+git tag -a -m "v$version" "v$version"
+git push origin HEAD
+git push origin "v$version"

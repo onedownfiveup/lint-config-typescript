@@ -1,0 +1,23 @@
+{
+  "name": "@casecommons/tslint-config",
+  "version": "1.0.0",
+  "description": "Configuration for TSLint.",
+  "files": [
+    "index.js",
+    "tslint.json"
+  ],
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Casecommons/lint-config-typescript.git"
+  },
+  "author": "Case Commons",
+  "license": "MIT",
+  "homepage": "https://github.com/Casecommons/lint-config-typescript",
+  "publishConfig": {
+    "registry": "https://casecommons.jfrog.io/casecommons/api/npm/npm/"
+  },
+  "peerDependencies": {
+    "tslint": "^5.8.0"
+  }
+}

@@ -1,0 +1,8 @@
+*.log
+.env
+cbp-core-*.tgz
+dist
+doc
+node_modules
+package-lock.json
+yarn.lock
