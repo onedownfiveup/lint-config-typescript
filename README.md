@@ -21,7 +21,7 @@ Use [`extends`](https://palantir.github.io/tslint/usage/configuration/) to inclu
 
 {
   "extends": [
-    "@casecommons/lint-config/tslint"
+    "@casecommons/tslint-config/tslint"
   ]
 }
 ```
