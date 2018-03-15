@@ -1,6 +1,6 @@
 # Case Commons TypeScript lint config
 
-Configuration for [TSLint](https://palantir.github.io/tslint/) per Case Commons style guide.
+Configuration for [TSLint](https://palantir.github.io/tslint/) per Case Commons style guide. For JavaScript linting, see [lint-config-javascript](https://github.com/Casecommons/lint-config-javascript).
 
 ## Usage
 
