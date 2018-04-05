@@ -4,27 +4,33 @@ Configuration for [TSLint](https://palantir.github.io/tslint/) per Case Commons 
 
 ## Usage
 
-Add to dev dependencies in your project:
+1. Add to dev dependencies in your project:
 
-```
-yarn add --dev @casecommons/tslint-config
-```
+   ```
+   yarn add --dev @casecommons/tslint-config
+   ```
 
-### TypeScript
+2. Add [TSLint](https://palantir.github.io/tslint/) as a dependency in your project and set it up to run as part of the project’s test suite.
+3. Use [`extends`](https://palantir.github.io/tslint/usage/configuration/) to include the appropriate lints into `tslint.json` in your own project. For example:
 
-Be sure to add [TSLint](https://palantir.github.io/tslint/) as a dependency in your project and set it up to run as part of the project’s test suite.
+   ```javascript
+   // tslint.json
 
-Use [`extends`](https://palantir.github.io/tslint/usage/configuration/) to include the appropriate lints into `tslint.json` in your own project. For example:
+   {
+     "extends": [
+       "@casecommons/tslint-config/tslint"
+     ]
+   }
+   ```
 
-```javascript
-// tslint.json
+4. Pass the `--project` flag to `tslint` to ensure rules which require type information can run. Most likely, you want a script which runs `tslint --project . --format verbose`.
 
-{
-  "extends": [
-    "@casecommons/tslint-config/tslint"
-  ]
-}
-```
+### Customizing rules
+
+Generally, rules should not be disabled in projects globally, with some common exceptions:
+
+- `no-implicit-dependencies` may be disabled for projects which use module name mapping, e.g. TypeScript’s `paths` config option, WebPack’s `resolve.alias` config option, or Jest’s `moduleNameMapper` config option.
+- `no-magic-numbers` may be disabled for projects which make heavy use of inline numbers, e.g. for React component grid layout specifications.
 
 ## Development
 
