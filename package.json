@@ -18,7 +18,8 @@
     "registry": "https://casecommons.jfrog.io/casecommons/api/npm/npm/"
   },
   "dependencies": {
-    "tslint-eslint-rules": "5.1.0"
+    "tslint-eslint-rules": "5.1.0",
+    "tslint-react": "3.5.1"
   },
   "peerDependencies": {
     "tslint": "^5.8.0"

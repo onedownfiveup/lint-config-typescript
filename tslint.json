@@ -2,7 +2,8 @@
   "defaultSeverity": "error",
   "extends": [
     "tslint:recommended",
-    "tslint-eslint-rules"
+    "tslint-eslint-rules",
+    "tslint-react"
   ],
   "jsRules": {},
   "rules": {
@@ -16,6 +17,14 @@
     "indent": [true, "spaces", 2],
     "indent": [true, 2, {"SwitchCase": 1}],
     "interface-name": [false],
+    "jsx-boolean-value": false,
+    "jsx-curly-spacing": [true, "never"],
+    "jsx-equals-spacing": [true, "never"],
+    "jsx-key": true,
+    "jsx-no-lambda": true,
+    "jsx-no-multiline-js": false,
+    "jsx-no-string-ref": true,
+    "jsx-self-close": true,
     "linebreak-style": [true, "LF"],
     "no-constant-condition": true,
     "no-control-regex": true,
