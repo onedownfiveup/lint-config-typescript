@@ -4,7 +4,7 @@
   "description": "Configuration for TSLint.",
   "files": [
     "index.js",
-    "tslint.json"
+    "base.json"
   ],
   "main": "index.js",
   "repository": {

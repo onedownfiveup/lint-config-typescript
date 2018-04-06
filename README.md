@@ -18,7 +18,7 @@ Configuration for [TSLint](https://palantir.github.io/tslint/) per Case Commons 
 
    {
      "extends": [
-       "@casecommons/tslint-config/tslint"
+       "@casecommons/tslint-config/base"
      ]
    }
    ```
