@@ -25,6 +25,21 @@ Configuration for [TSLint](https://palantir.github.io/tslint/) per Case Commons 
 
 4. Pass the `--project` flag to `tslint` to ensure rules which require type information can run. Most likely, you want a script which runs `tslint --project . --format verbose`.
 
+### Test rules
+
+Test code is given more leeway with regard to certain rules. To use these more lenient rules: add the following to `tslint.json` is your project’s test subdirectory:
+
+
+   ```javascript
+   // test/tslint.json
+
+   {
+     "extends": [
+       "@casecommons/tslint-config/tests"
+     ]
+   }
+   ```
+
 ### Customizing rules
 
 Generally, rules should not be disabled in projects globally, with some common exceptions:
