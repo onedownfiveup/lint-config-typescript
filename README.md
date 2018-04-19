@@ -27,7 +27,7 @@ Configuration for [TSLint](https://palantir.github.io/tslint/) per Case Commons 
 
 ### Test rules
 
-Test code is given more leeway with regard to certain rules. To use these more lenient rules: add the following to `tslint.json` is your project’s test subdirectory:
+Test code is given more leeway with regard to certain rules. To use these more lenient rules, add the following to `tslint.json` (replacing with the correct relative path to your project root) in your project’s test subdirectory:
 
 
    ```javascript
@@ -35,6 +35,7 @@ Test code is given more leeway with regard to certain rules. To use these more l
 
    {
      "extends": [
+       "./path/to/project/root/tslint.json",
        "@casecommons/tslint-config/tests"
      ]
    }
