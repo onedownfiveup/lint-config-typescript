@@ -2,6 +2,7 @@
   "rules": {
     "jsx-no-lambda": false,
     "no-duplicate-string": false,
-    "no-magic-numbers": false
+    "no-magic-numbers": false,
+    "no-non-null-assertion": false
   }
 }
