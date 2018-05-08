@@ -1,6 +1,7 @@
 {
   "rules": {
     "jsx-no-lambda": false,
+    "no-big-function": false,
     "no-duplicate-string": false,
     "no-magic-numbers": false,
     "no-non-null-assertion": false
